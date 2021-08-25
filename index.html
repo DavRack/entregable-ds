@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Karmen</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+  </head>
+  <body>
+      <div class="flex flex-col justify-around bg-gray-100 h-screen">
+        <div>
+          <img src="logo.png" class="w-16 ml-20"></img>
+          <p class="text-center text-6xl font-bold filter drop-shadow-lg text-gray-700">
+              Karmen
+          </p>
+        </div>
+        <button onmousedown="changePage('vehiculo')" class="w-64 h-32 rounded-2xl bg-white self-center shadow-lg border">
+            <p class="text-2xl text-bold text-gray-700">Registrar vehiculo</p>
+        </button>
+        <button onmousedown="changePage('viaje')" class="w-64 h-32 rounded-2xl bg-white self-center shadow-lg border">
+            <p class="text-2xl text-bold text-gray-700">Crear viaje</p>
+        </button>
+        <button onmousedown="changePage('calificar')" class="w-64 h-32 rounded-2xl bg-white self-center shadow-lg border">
+            <p class="text-2xl text-bold text-gray-700">Calificar conductor</p>
+        </button>
+        <p class="text-center text-sm text-bold filter drop-shadow">Hecho con amor por Karmen :3</p>
+    </div>
+  </body>
+  <script src="script.js"></script>
+</html>
