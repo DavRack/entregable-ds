@@ -8,23 +8,23 @@
   </head>
   <body>
       <div class="flex flex-col justify-around bg-gray-100 h-screen">
-        <div>
-          <img src="logo.png" class="w-16 ml-20"></img>
-          <p class="text-center text-6xl font-bold filter drop-shadow-lg text-gray-700">
+        <div class="max-w-min self-center">
+          <img src="static/logo.png" class="w-16"></img>
+          <p class="text-6xl max-w-min font-bold filter drop-shadow-lg ml-2 text-gray-700">
               Karmen
           </p>
         </div>
-        <button onmousedown="changePage('vehiculo')" class="w-64 h-32 rounded-2xl bg-white self-center shadow-lg border">
-            <p class="text-2xl text-bold text-gray-700">Registrar vehiculo</p>
-        </button>
-        <button onmousedown="changePage('viaje')" class="w-64 h-32 rounded-2xl bg-white self-center shadow-lg border">
-            <p class="text-2xl text-bold text-gray-700">Crear viaje</p>
-        </button>
-        <button onmousedown="changePage('calificar')" class="w-64 h-32 rounded-2xl bg-white self-center shadow-lg border">
-            <p class="text-2xl text-bold text-gray-700">Calificar conductor</p>
-        </button>
+        <a href="src/view/vehiculo.html" class="w-64 h-32 rounded-2xl bg-white self-center shadow-lg border flex justify-center">
+            <p class="text-2xl text-bold text-gray-700 self-center">Registrar vehiculo</p>
+        </a>
+        <a href="src/view/viaje.html" class="w-64 h-32 rounded-2xl bg-white self-center shadow-lg border flex justify-center">
+            <p class="text-2xl text-bold text-gray-700 self-center">Crear viaje</p>
+        </a>
+        <a href="src/view/calificar.html" class="w-64 h-32 rounded-2xl bg-white self-center shadow-lg border flex justify-center">
+            <p class="text-2xl text-bold text-gray-700 self-center">Calificar conductor</p>
+        </a>
         <p class="text-center text-sm text-bold filter drop-shadow">Hecho con amor por Karmen :3</p>
     </div>
   </body>
-  <script src="script.js"></script>
+  <script src="src/logic/script.js"></script>
 </html>
