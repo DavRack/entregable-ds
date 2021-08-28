@@ -60,7 +60,7 @@
              </div>
              <div>
                <p class="text-center font-bold">Tarifa</p>
-                <input id="modelo" type="text" 
+                <input id="rate" type="text" 
                 class="shadow-lg rounded-lg border w-16 h-10 text-center text-xl
                 p-1 self-center"
                 placeholder="Tarifa">
@@ -72,19 +72,35 @@
                p-1 self-center">
              </div>
           </div>
-          <div>
-            <p class="text-center font-bold text-xl">Documento de propiedad</p>
-            <p class="text-center italics underline">
-                Adjuntar documento
-            </p>
+          <div class="flex flex-row justify-around">
+             <div class="flex flex-col">
+               <p class="text-center font-bold">Métodos de pago aceptados</p>
+                  <label class="self-center">
+                    Efectivo <input id="cash" type="checkbox" 
+                    class="shadow-lg mt-4 ml-1 rounded-lg border w-4 h-4 self-center text-center text-xl
+                    p-1 self-center">
+                  </label>
+                  <label class="self-center">
+                    Tarjeta <input id="card" type="checkbox" 
+                    class="shadow-lg mt-4 ml-1 rounded-lg border w-4 h-4 self-center text-center text-xl
+                    p-1 self-center">
+                  </label>
+             </div>
+             <div class="flex flex-col">
+               <p class="text-center font-bold">Observaciones adicionales</p>
+                <input id="observations" type="text" 
+                class="shadow-lg rounded-lg border w-48 h-full text-center text-xl
+                p-1 self-center"
+                placeholder="Observaciones">
+             </div>
           </div>
           <div class="flex flex-row justify-around">
+              <button class="border rounded-lg shadow-lg bg-blue-500 p-1 w-32">
+                <p class="font-bold text-white text-lg">Crear viaje</p>
+              </button>
               <a href="../../index.html" class="border rounded-lg shadow-lg bg-red-500 p-1 w-32 flex justify-center">
                 <p class="font-bold text-white text-lg self-center">Salir</p>
               </a>
-              <button class="border rounded-lg shadow-lg bg-blue-500 p-1 w-32">
-                <p class="font-bold text-white text-lg">Registrar vehiculo</p>
-              </button>
           </div>
       </div>
   </body>
