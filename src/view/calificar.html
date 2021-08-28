@@ -5,10 +5,57 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
   </head>
   <body>
       <div class="flex flex-col justify-around bg-gray-100 h-screen">
+          <p class="text-center font-bold text-4xl text-gray-700">Calificar conductor</p>
+          <p class="text-center p-4 text-gray-700">Para calificar un conductor por favor puntúelo de 0 a 5 estrellas,
+          siendo 0 el mínimo y 5 el máximo. En caso de que tenga que dar detalles adicionales
+          escribalos en el apartado de comentarios</p>
+          <div class="p-2 pt-0 flex flex-col shadow-lg border w-11/12 rounded-lg self-center">
+              <p class="bg-gray-200 p-3 w-4/5 text-center rounded-lg font-bold shadow self-center mb-4">
+                  Información del conductor
+              </p>
+              <div class="flex flex-row justify-start">
+                <img src="../../static/end.png" class="h-24 mr-2 self-center shadow"></img>
+                <div class="self-center">
+                    <div class="flex flex-row">
+                      <p class="font-bold mr-1">Nombre: </p>
+                      <p id="driver-name"></p>
+                    </div>
+                    <div class="flex flex-row">
+                      <p class="font-bold mr-1">Tipo de vhículo: </p>
+                      <p id="driver-vehicle"></p>
+                    </div>
+                </div>
+              </div>
+          </div>
+          <div class="flex flex-col justify-center">
+              <p class="text-center font-bold text-2xl text-gray-700">Puntuación</p>
+              <div class="self-center">
+                  <span class="material-icons">star</span>
+                  <span class="material-icons">star</span>
+                  <span class="material-icons">star</span>
+                  <span class="material-icons">star</span>
+                  <span class="material-icons">star</span>
+              </div>
+              <p class="mt-6 text-center font-bold text-2xl text-gray-700">Comentarios</p>
+              <div class="flex flex-col">
+                 <input id="observations" type="text" 
+                 class="shadow-lg rounded-lg border w-2/3 h-32 text-center text-xl
+                 p-1 self-center"
+                 placeholder="Comentarios acerca del conductor (Maximo 100 caracteres)">
+              </div>
+          </div>
+          <div class="flex flex-row justify-around">
+              <button class="border rounded-lg shadow-lg bg-blue-500 p-1 w-32">
+                  <p class="font-bold text-white text-lg">Calificar</p>
+              </button>
+              <a href="../../index.html" class="border rounded-lg shadow-lg bg-red-500 p-1 w-32 flex justify-center">
+                  <p class="font-bold text-white text-lg self-center">Salir</p>
+              </a>
+          </div>
       </div>
   </body>
-  <script src="../logic/script.js"></script>
 </html>
