@@ -1,95 +1,94 @@
 <!doctype html>
 <html>
-  <head>
-    <title>Karmen</title>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
-  </head>
-  <body>
-      <div class="flex flex-col justify-around bg-gray-100 h-screen">
-          <div>
-              <p class="text-center font-bold text-4xl text-gray-700">Registrar vehiculo</p>
-              <p class="text-center p-4 text-gray-700">Para registrar un vehiculo por favor complete todos los campos y adjunte 
-              los documentos necesario. Por ultimo, seleccione el boton registrar vehiculo
-              para guardar su vehiculo y utilizarlo en los viajes que cree</p>
-          </div>
-          <div class="flex flex-row w-screen justify-around">
-              <div class="flex flex-col w-48">
-                  <p class="text-center font-bold">Tipo de vehiculo</p>
-                  <label class="self-center">
-                    <input id="auto" type="checkbox" 
-                    class="shadow-lg rounded-lg border w-4 h-4 text-center text-xl
-                    p-1 self-center">
-                    Automovil
-                  </label>
-                  <label class="self-center">
-                    <input id="auto" type="checkbox" 
-                    class="shadow-lg rounded-lg border w-4 h-4 text-center text-xl
-                    p-1 self-center">
-                    Motocicleta
-                  </label>
 
-                  <p class="text-center font-bold mt-8">Modelo</p>
-                  <input id="modelo" type="text" 
-                  class="shadow-lg rounded-lg border w-32 h-10 text-center text-xl
-                  p-1 self-center"
-                  placeholder="Modelo">
-                  <p class="text-center font-bold mt-8">Capacidad</p>
-                  <div class="flex flex-row justify-center">
-                    <button id="capacitySub" class="w-10 h-10 rounded-full shadow-lg border rounded-full bg-white">
-                        -1
-                    </button>
-                    <div id="capacity" class="w-24 h-10 bg-white mx-1 shadow-lg border rounded-lg">
-                    </div>
-                    <button id="capacityAdd" class="w-10 h-10 rounded-full shadow-lg border rounded-full bg-white">
-                        +1
-                    </button>
-                  </div>
-              </div>
-              <div class="flex flex-col w-48">
-                  <p class="text-center font-bold">
-                      Color
-                  </p>
-                  <form class="self-center">
-                    <label for="colors"></label>
-                    <select name="colors" id="cars" class="w-24 h-8 p-1 rounded">
-                      <option value="Amarillo">Amarillo</option>
-                      <option value="Azul">Azul</option>
-                      <option value="Rojo">Rojo</option>
-                    </select>
-                    <br><br>
-                  </form>
-                  <p class="text-center font-bold pt-6">
-                      Placa
-                  </p>
-                  <input id="placa" type="text" 
-                  class="shadow-lg rounded-lg border w-32 h-10 text-center text-xl
-                  p-1 self-center"
-                  placeholder="LLL-NNN">
-                  <p class="text-center font-bold pt-12">
-                      Fotos
-                  </p>
-                  <p class="text-center italics underline">
-                      Adjuntar Fotos
-                  </p>
-              </div>
+<head>
+  <title>Karmen</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body>
+  <div class="flex flex-col justify-around bg-gray-100 h-screen">
+    <div>
+      <p class="text-center font-bold text-4xl text-gray-700">Registrar vehiculo</p>
+      <p class="text-center p-4 text-gray-700">Para registrar un vehiculo por favor complete todos los campos y adjunte
+        los documentos necesario. Por ultimo, seleccione el boton registrar vehiculo
+        para guardar su vehiculo y utilizarlo en los viajes que cree</p>
+    </div>
+    <div class="flex flex-row w-screen justify-around">
+      <div class="flex flex-col w-48">
+        <p class="text-center font-bold">Tipo de vehiculo</p>
+        <label class="self-center">
+          <input id="auto" type="radio" class="shadow-lg rounded-lg border w-4 h-4 text-center text-xl
+                    p-1 self-center" name="vehicleType" checked="checked">
+          Automovil
+        </label>
+        <label class="self-center">
+          <input id="moto" type="radio" class="shadow-lg rounded-lg border w-4 h-4 text-center text-xl
+                    p-1 self-center" name="vehicleType">
+          Motocicleta
+        </label>
+
+        <p class="text-center font-bold mt-8">Modelo</p>
+        <input id="modelo" type="text" class="shadow-lg rounded-lg border w-32 h-10 text-center text-xl
+                  p-1 self-center" placeholder="Modelo">
+        <p class="text-center font-bold mt-8">Capacidad</p>
+        <div class="flex flex-row justify-center">
+          <button id="capacitySub" class="w-10 h-10 rounded-full shadow-lg border rounded-full bg-white">
+            -1
+          </button>
+          <div id="capacity" class="w-24 h-10 bg-white mx-1 shadow-lg border rounded-lg">
           </div>
-          <div>
-            <p class="text-center font-bold text-xl">Documento de propiedad</p>
-            <p class="text-center italics underline">
-                Adjuntar documento
-            </p>
-          </div>
-          <div class="flex flex-row justify-around">
-              <button class="border rounded-lg shadow-lg bg-blue-500 p-1 w-32">
-                <p class="font-bold text-white text-lg">Registrar vehiculo</p>
-              </button>
-              <a href="../../index.html" class="border rounded-lg shadow-lg bg-red-500 p-1 w-32 flex justify-center">
-                <p class="font-bold text-white text-lg self-center">Salir</p>
-              </a>
-          </div>
+          <button id="capacityAdd" class="w-10 h-10 rounded-full shadow-lg border rounded-full bg-white">
+            +1
+          </button>
+        </div>
       </div>
-  </body>
-  <script src="../logic/script.js"></script>
+      <div class="flex flex-col w-48">
+        <p class="text-center font-bold">
+          Color
+        </p>
+        <form class="self-center">
+          <label for="colors"></label>
+          <select name="colors" id="cars" class="w-24 h-8 p-1 rounded">
+            <option value="Amarillo">Amarillo</option>
+            <option value="Azul">Azul</option>
+            <option value="Rojo">Rojo</option>
+          </select>
+          <br><br>
+        </form>
+        <p class="text-center font-bold pt-6">
+          Placa
+        </p>
+        <input id="placa" type="text" class="shadow-lg rounded-lg border w-32 h-10 text-center text-xl
+                  p-1 self-center" placeholder="LLL-NNN">
+        <p class="text-center font-bold pt-12 flex-item">
+          Fotos
+        </p>
+        <p id="addPhotosButton" class="text-center italics underline" style="cursor: pointer;">Adjuntar foto</p>
+        <p id="infoActualPhoto" class="self-center" style="text-align: center;">No ha seleccionado fotos</p>
+        <input type="file" id="addPhotos" accept="image/png, image/jpeg" style="display: none;">
+      </div>
+    </div>
+    <div>
+      <p class="text-center font-bold text-xl">Documento de propiedad</p>
+      <p id="addDocumentButton" class="text-center italics underline" style="cursor: pointer;">Adjuntar documento</p>
+      <p id="infoActualDocument" class="self-center" style="text-align: center;">No ha seleccionado documento</p>
+      <input type="file" id="addDocuments" accept="application/pdf" style="display: none;">
+
+    </div>
+    <div class="flex flex-row justify-around">
+      <button class="border rounded-lg shadow-lg bg-blue-500 p-1 w-32" id="registerButton">
+        <p class="font-bold text-white text-lg">Registrar vehiculo</p>
+      </button>
+      <a href="../../index.html" class="border rounded-lg shadow-lg bg-red-500 p-1 w-32 flex justify-center">
+        <p class="font-bold text-white text-lg self-center">Salir</p>
+      </a>
+    </div>
+  </div>
+</body>
+<script src="../logic/script.js"></script>
+<script src="../logic/registrarVehiculo.js"></script>
+
 </html>
