@@ -2,7 +2,9 @@ buttonAdd = document.getElementById("capacityAdd")
 buttonSub = document.getElementById("capacitySub")
 buttonRegister = document.getElementById("registerButton")
 placa = document.getElementById("placa")
+color = document.getElementById("color")
 vehicleType = document.getElementsByName("vehicleType")
+auto = document.getElementById("auto")
 capacity = document.getElementById("capacity")
 capacity.textContent = 4
 modelo = document.getElementById("modelo")
@@ -60,7 +62,27 @@ buttonRegister.addEventListener("click", function() {
     
     if (errorMsg){
         window.alert(errorMsg)
+        return
     }
+
+    let jsonData = {
+        placa: placa.value,
+        capacidad: capacity.textContent,
+        modelo: modelo.value,
+        color: color.value,
+        tipo_vhiculo: auto.checked? 'Automovil':'Motocicleta',
+        foto: filePhoto.value,
+        documento: fileDocument.value,
+    }
+
+    if (window.localStorage.getItem(placa.value) !== null){
+        alert("Ya existe un vehículo registrado con la placa que ingresó")
+        return
+    }
+    console.table(jsonData)
+    window.localStorage.setItem(placa.value, JSON.stringify(jsonData))
+    alert("Vehículo registrado con éxito")
+
 });
 
 
