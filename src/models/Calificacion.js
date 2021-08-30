@@ -4,8 +4,8 @@ function newCalificacion (cedula_conductor, puntuacion, comentario){
         "puntuacion": puntuacion,
         "comentario": comentario
     }
-    
-    console.log(jsonData)
+
+    console.table(jsonData)
     localStorage.setItem("calificacion", JSON.stringify(jsonData))
 
 

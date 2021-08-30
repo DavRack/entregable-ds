@@ -29,7 +29,7 @@ for (let j of getConductores()){
 
     let vehiculos_conductor_actual = getVehiculosByCedula(j["cedula"])
     let vehiculos_texto = ""
-
+    console.log(vehiculos_conductor_actual)
     for (let vehiculo_actual of vehiculos_conductor_actual){
         if (vehiculos_conductor_actual.length == 1){
             vehiculos_texto = vehiculo_actual["modelo"]+" - "+vehiculo_actual["color"];
