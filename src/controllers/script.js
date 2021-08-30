@@ -1,3 +1,5 @@
+localStorage.setItem("conductor", "70597654")
+
 function changePage(page){
     switch(page){
         case 'vehiculo':
