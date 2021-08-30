@@ -22,11 +22,11 @@
                 <div class="self-center">
                     <div class="flex flex-row">
                       <p class="font-bold mr-1">Nombre: </p>
-                      <p id="driver-name"></p>
+                      <select id="driver-name" class="w-48 h-8 rounded"> </select>
                     </div>
-                    <div class="flex flex-row">
-                      <p class="font-bold mr-1">Tipo de vhículo: </p>
-                      <p id="driver-vehicle"></p>
+                    <div class="flex flex-row mt-2">
+                      <p class="font-bold mr-1">Vehiculos asociados: </p>
+                      <p id="driver-vehicle"> </select>
                     </div>
                 </div>
               </div>
@@ -34,12 +34,13 @@
           <div class="flex flex-col justify-center">
               <p class="text-center font-bold text-2xl text-gray-700">Puntuación</p>
               <div class="self-center">
-                  <span class="material-icons">star</span>
-                  <span class="material-icons">star</span>
-                  <span class="material-icons">star</span>
-                  <span class="material-icons">star</span>
-                  <span class="material-icons">star</span>
+                  <span class="material-icons" style="cursor: pointer" id="star1">star</span>
+                  <span class="material-icons" style="cursor: pointer" id="star2">star</span>
+                  <span class="material-icons" style="cursor: pointer" id="star3">star</span>
+                  <span class="material-icons" style="cursor: pointer" id="star4">star</span>
+                  <span class="material-icons" style="cursor: pointer" id="star5">star</span>
               </div>
+              <p class="self-center underline" id="starsText">0 de 5 estrellas</p>
               <p class="mt-6 text-center font-bold text-2xl text-gray-700">Comentarios</p>
               <div class="flex flex-col">
                  <input id="observations" type="text" 
@@ -49,7 +50,7 @@
               </div>
           </div>
           <div class="flex flex-row justify-around">
-              <button class="border rounded-lg shadow-lg bg-blue-500 p-1 w-32">
+              <button class="border rounded-lg shadow-lg bg-blue-500 p-1 w-32" id= "buttonCalificar">
                   <p class="font-bold text-white text-lg">Calificar</p>
               </button>
               <a href="../../index.html" class="border rounded-lg shadow-lg bg-red-500 p-1 w-32 flex justify-center">
@@ -58,4 +59,5 @@
           </div>
       </div>
   </body>
+  <script type="module" src="../controllers/CalificarConductorControlador.js"></script>
 </html>

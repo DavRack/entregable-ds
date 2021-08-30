@@ -4,10 +4,10 @@ let vehicles = []
 for (let i = 0; i < localStorage.length; i++){
     if (localStorage.key(i).match("-")){
         vehicles.push(localStorage.key(i))
-        if(i == 0){
-            document.getElementById("capacity").textContent = JSON.parse(localStorage.getItem(localStorage.key(i)))["capacidad"]
-        }
     }
+}
+if(vehicles.length > 0){
+    document.getElementById("capacity").textContent = JSON.parse(localStorage.getItem(vehicles[0]))["capacidad"]
 }
 
 let select = document.getElementById('vehicle');

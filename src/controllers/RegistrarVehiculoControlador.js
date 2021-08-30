@@ -66,6 +66,7 @@ buttonRegister.addEventListener("click", function() {
     }
 
     let jsonData = {
+        cedula_conductor: JSON.parse(localStorage.getItem("conductor"))["cedula"],
         placa: placa.value,
         capacidad: capacity.textContent,
         modelo: modelo.value,
