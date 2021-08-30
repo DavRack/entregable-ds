@@ -20,8 +20,7 @@ let jsonData = {"id": id_viaje,
 "descripcion": descripcion
 }
 
-localStorage.setItem(jsonData["id"], JSON.stringify(jsonData))
-console.table(jsonData)
+insert(jsonData)
 
 }
 
@@ -34,6 +33,11 @@ function numeroViajes(){
         }
     }
     return contadorViajes;
+}
+
+function insert(viaje) {
+    localStorage.setItem(viaje["id"], JSON.stringify(viaje))
+    console.table(jsonData)
 }
 
 export {newViaje, numeroViajes};
