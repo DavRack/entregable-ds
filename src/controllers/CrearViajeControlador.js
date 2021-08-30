@@ -70,7 +70,7 @@ function crearViaje(){
 
     let errorMsg;
 
-    if (!directionDeparture.value || !directionArrive.value || !rate.value || !autoReserve.checked  || (!cash.checked && !card.checked)){
+    if (!directionDeparture.value || !directionArrive.value || !rate.value || (!cash.checked && !card.checked)){
         errorMsg = "No se llenaron todos los campos obligatorios, por favor llene los campos faltantes"
     }
     else if (checkDate()){
@@ -87,7 +87,7 @@ function crearViaje(){
         alert(errorMsg)
         return
     }
-    let cedula_conductor = localStorage.getItem("conductor")
+    let cedula_conductor = JSON.parse(localStorage.getItem("conductor1")).cedula
     let pagos = []
 
     if (cash.checked){

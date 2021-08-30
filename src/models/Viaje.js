@@ -37,7 +37,7 @@ function numeroViajes(){
 
 function insert(viaje) {
     localStorage.setItem(viaje["id"], JSON.stringify(viaje))
-    console.table(jsonData)
+    console.table(viaje)
 }
 
 export {newViaje, numeroViajes};
