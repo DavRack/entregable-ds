@@ -64,10 +64,12 @@ buttonRegister.addEventListener("click", function() {
         window.alert(errorMsg)
         return
     }
+    let arreglo_placa = placa.value.trim().split("-")
+    arreglo_placa[0] = arreglo_placa[0].toUpperCase() 
 
     let jsonData = {
         cedula_conductor: JSON.parse(localStorage.getItem("conductor1"))["cedula"],
-        placa: placa.value,
+        placa: arreglo_placa.join("-"),
         capacidad: capacity.textContent,
         modelo: modelo.value,
         color: color.value,
